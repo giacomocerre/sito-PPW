@@ -1,0 +1,1214 @@
+/*
+1. Reset
+	1.1 Classi pre-impostate
+2. Header & Nav
+4. Content
+	4.1 Index.html
+		4.1.1 index prima section
+		4.1.2 index seconda section
+		4.3.3 index terza section
+		4.1.4 index quarta section
+		4.1.5 index quinta section
+		4.1.6 index sesta section
+	4.2 Storia.html 
+	4.3 Pizza.html
+		4.3.1 Filtro
+		4.3.2 Info
+		4.3.3 Creazione
+	4.4 About.html
+5. Footer
+6. Mobile
+	6.1 Mobile classi pre-impostate
+	6.2 Mobile Index.htmk
+		6.2.1 Modile 2-6 section
+	6.3 Mobile Storia.html
+	6.4 Mobile Pizza.html
+		6.4.1 Mobile filtro
+		6.4.2 Mobile info
+		6.4.3 Mobile creazione
+	6.5 Mobile About
+		[...]
+	6.6 Mobile footer
+*/
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Classi pre-impostate */
+.frase{
+    color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    padding-bottom: 100px;
+}
+.evidence{
+    font-family: "Mexcellent", cursive;
+    font-size: 6em;
+    color: #f6f6f6;
+    text-align: center;
+    position: relative;
+    top: 50px; 
+}
+.divisore{
+	width: 100%;
+	height: 50px;
+	background: #f6f6f6;
+}
+.vai{
+    width: 15%;
+    margin-left: 43%;
+    text-align: center;
+    margin-top: 50%;
+    height: 20px;
+    padding-top: 23px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid tomato;
+    background: #DC3522;
+    text-transform: uppercase;
+    color: #f6f6f6;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+.vai:hover{
+	background: tomato;
+	border-color: #DC3522;
+}
+/* fine pre-impostate */
+/*Header & Nav */
+header {
+	width: 100%;
+    height: 55px;
+    position: fixed;
+    background: #333;
+    z-index: 9999;
+}
+nav{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+#logoHead{
+	float: left;
+	position: relative;
+	left: 60px;
+	width: 60px;
+}
+#ham{
+	position: relative;
+	width: 40px;
+	top: 10px;
+}
+/* Fine Header & Nav */
+.lower{
+	width: 100%;
+	color: #f6f6f6;
+	height: 74px;
+	text-align: right;
+}
+
+.lower:hover{
+  cursor: pointer;
+}
+
+input#op{
+  display:none;
+}
+.index{
+	padding: 0 30px;
+}
+.lower label{
+	font-family: 'NotCourierSans';
+	text-transform: uppercase;
+	font-size: 40px;
+	text-align: center;
+	position: relative;
+	right: 55px;
+	top: 5px;
+	opacity: 0;
+	bottom: 15px;
+}
+.lower label:hover{
+  cursor:pointer;
+}
+
+.coperto{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+}
+
+.coperto label{
+	width: 58px;
+	height:58px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: url("img/close.png");
+	z-index: 100;
+	cursor:pointer;
+}
+
+.coperto nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	font-size: 54px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.coperto ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.coperto ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+}
+
+.coperto ul li a {
+	font-weight: 300;
+	display: block;
+	color: white;
+	text-decoration:none;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+	font-family: 'NotCourierSans';
+	text-transform:uppercase;
+}
+
+.coperto ul li a:hover,
+.coperto ul li a:focus {
+	color: #DC3522;
+}
+
+.lower~.fullscreen{
+	display: none;
+}
+#op:checked~.fullscreen{
+	display: block;
+}
+/* Content */
+/* index prima section */
+#back_pizza{
+	background: url(img/background.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+}
+#back_pizza img{
+    width: 400px;
+    margin-top: 140px;
+    margin-bottom: 110px;
+}
+.titolo{
+	font-family: "Oswald", sans-serif;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 80px;
+}
+/* index seconda section */
+section#wrapper_preview {
+    overflow: auto;
+}
+#pizza_preview{
+	margin-top: 80px;
+}
+.preview{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	padding: 110px 0px;
+}
+.prima img{
+	width: 35%;
+	z-index: 1;
+}
+.seconda img{
+	width: 25%
+}
+.terza img{
+	width: 15%;
+}
+div.preview.prima{
+	z-index: 1;
+}
+#seconda_left img{
+    position: relative;
+    left: 16%;
+    top: 40px;
+    z-index: 0;
+}
+#seconda_right img{
+    position: relative;
+    right: 16%;
+    top: 40px;
+    z-index: 0;
+}
+#terza_left img{
+    position: relative;
+    left: 30%;
+    top: 80px;
+    z-index: -1;
+}
+#terza_right img{
+    position: relative;
+    right: 30%;
+    top: 80px;
+    z-index: -1;
+}
+/* index terza section */
+#back_pizza2{
+	background: url("img/background2.png")  no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 400px;
+	margin-top:100px;
+	padding: 80px 0px;
+}
+#back_pizza2 div {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 41px;
+}
+#back_pizza2 h3{
+	padding-bottom: 0;
+}
+#back_pizza2 h2{
+	top: 0;
+}
+/* index quarta section */
+#wrapper_storia{
+	background: url(img/back_italia.png) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    overflow: auto;
+
+}
+#testo_storia{
+    width: 50%;
+    padding: 100px;
+    box-sizing: border-box;
+}
+.paragrafo{
+	font-family: "Raleway", sans-serif;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	border-left: 3px solid red;
+	padding-left: 10px;
+}
+#testo_storia cite{
+	font-family: "Raleway", sans-serif;
+	font-size: 0.6em;
+}
+#wrapper_storia .vai{
+	margin-top: 20%;
+	margin-bottom: 20px;
+}
+/* index quinta section */
+#half1{
+width: 100%;
+height: 500px;
+background: url("img/half1.png");
+background-repeat: no-repeat;
+text-align: center;
+padding-top: 10%;
+padding-bottom: 10%;
+background-attachment: initial;
+background-size: cover;
+height: initial;
+overflow: auto;
+}
+#half1 .vai{
+	margin-top: 0;
+}
+/* index sesta section */
+#wrapper_about{
+	overflow: auto;
+}
+#wrapper_about .vai{
+	margin-top: 100px;
+}
+#wrapper_about .paragrafo{
+	width: 50%;
+	margin-left: 30%;
+	margin-top: 5%;
+}
+/* Storia.html */
+.sezione_storia {
+    overflow: auto;
+}
+.left img{
+	float: left;
+	width: 20%;
+}
+.left p{
+	float: right;
+	width: 70%;
+}
+.rigth img{
+	float: right;
+	width: 20%;
+}
+.rigth p{
+	float: left;
+	width: 70%;
+}
+.spiegazione {
+    overflow: auto;
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+.forno{
+	padding-top: 50px;
+}
+.forno .tipo_forno{
+	font-family: "Oswald", sans-serif;
+	font-weight: 900;
+	font-size: 1.6em;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+}
+.forno .lievitazione{
+	font-family: "Oswald", sans-serif;
+	font-size: 1.3em;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid tomato;
+}
+.lista_forno li{
+	font-family: "Raleway",sans-serif;
+	padding-bottom: 10px;
+}
+div#content_legna {
+    width: 30%;
+    float: left;
+}
+ul#legna {
+    width: 50%;
+}
+div#content_elettrico {
+    width: 50%;
+    float: right;
+}
+ul#elettrico {
+    width: 50%;
+}
+#legislazione p{
+	width: 90%;
+	margin: 50px;
+}
+/* Pizza.html */
+/* Filtro */
+#content{
+	padding-top:55px; 
+}
+#draggable{
+	position: relative;
+	border-radius: 200px 200px 0px 200px;
+    -moz-border-radius: 200px 200px 0px 200px;
+    -webkit-border-radius: 200px 200px 0px 200px;
+    border: 0px solid #000000;
+    background: red;
+	width: 60px;
+	height: 60px;
+	transform:rotate(40deg);
+}
+.drag:hover{
+	cursor: pointer;
+}
+#filtro{
+	width: 40%;
+	float: left;
+	position: fixed;
+	z-index: -1;
+}
+#content_draggable{
+	width: 540px;
+	height: 680px;
+	background: url("img/regioni.png");
+	background-size: cover;
+	background-repeat:no-repeat; 
+}
+#messaggio{
+	transform:rotate(320deg);
+	position: relative;
+	top: 20px;
+	left: 40px;
+}
+#messaggio:hover{
+	cursor: default;
+}
+#messaggio p {
+    position: relative;
+    bottom: 50px;
+    left: 50px;
+    width: 180px;
+    padding: 20px;
+    background: tomato;
+    color: #f6f6f6;
+    font-family: "Raleway",sans-serif;
+}
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid tomato;
+    position: relative;
+    left: 37px;
+    top: -2px; 
+}
+p{
+	position: relative;
+	top: 100%;
+	float: left;
+	margin-right:40px;
+}
+#content_pizza{
+	width: 60%;
+	position: relative;
+	top: 40px;
+	z-index: -1;
+	float: right;
+}
+article.pizza{
+	width: 22.45%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    background: #f6f3f1;
+    margin: 11px;
+	-webkit-box-shadow: 0px 4px 6px 0px rgba(50, 50, 50, 0.65);
+	-moz-box-shadow:0px 4px 6px 0px rgba(50, 50, 50, 0.65);
+	box-shadow:0px 4px 6px 0px rgba(50, 50, 50, 0.65);
+}
+article.pizza:hover{
+	cursor: pointer;
+}
+article img{
+	width: 150px;
+}
+article p, article h3	{
+	width: 100%;
+	margin: 0;
+	color: #333;
+}
+article h3{
+    border-bottom: none;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    font-family: "Oswald",sans-serif;
+    font-size: 1.5em;
+}
+article p{
+    background: #333;
+    color: #f6f6f6;
+    font-size: 13px;
+    text-align: left;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-family: "Raleway",sans-serif;
+}
+input[type="button"]{
+	position: absolute;
+    left: 5%;
+    top: 85%;
+    background: #f6f6f6;
+    border:none;
+    border-bottom: 3px solid #333;
+    color: #333;
+    width: 100px;
+    height: 60px;
+    text-transform: uppercase;
+}
+input[type="button"]:hover{
+	cursor: pointer;
+	background: #eee;
+}
+#crea {
+    top: 0;
+    height: 100%;
+    left: 98%;
+    background: tomato;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
+#crea:hover{
+	background: #dc3f5f;
+
+}
+#informazioni{
+    width: 52.4%;
+    height: 32px;
+    float: left;
+    position: fixed;
+    margin-left: 40.7%;
+    background: #ccc;
+    font-family: "Oswald",sans-serif;
+    font-weight: bold;
+    padding-bottom: 20px;
+    border-left: 5px solid red;
+}
+#informazioni p.valore{
+	top: 15px;
+	margin-left: 10px;
+}
+#informazioni p span.risultato{
+	font-family: "Raleway",sans-serif;
+	background: #fff;
+	border:2px solid #f6f6f6;
+	padding: 0 5px;
+}
+h2#messaggio_mare {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-family: "oswald",sans-serif;
+    font-size: 3em;
+    display: none;
+}
+/* Info */
+#info{
+	display: none;
+    padding-top: 110px;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    background: #f6f6f6;
+    border-bottom: none;
+}
+#nome_pizza{
+	font-family: "Oswald", sans-serif;
+	font-weight: 900;
+	font-size: 3em;
+
+}
+#info h3{
+	font-family: "Raleway", sans-serif;
+	font-size: 2em;
+}
+#indietro{
+	width: 80px;
+	height: 80px;
+	border: 3px solid tomato;
+	font-family: "Raleway",sans-serif;
+	font-weight: 900;
+	font-size: 2em;
+	color: #f6f6f6;
+	background: #333;
+	border-radius: 100%;
+	float: left;
+	position: fixed;
+	left: 0px;
+	top: 60px;
+	display: none;
+}
+#img_pizza{
+    width: 30%;
+    padding: 60px;
+}
+#indietro:hover{
+	cursor:pointer;
+	background: #444;
+}
+#indietro:focus{
+	outline: none;
+}
+#caratteristiche{
+	overflow: auto;
+    width: 100%;
+    padding-top: 60px;
+    background: #333;
+    color: #f6f6f6;
+	-webkit-box-shadow: 0px -5px 13px 0px rgba(50, 50, 50, 0.37);
+	-moz-box-shadow:    0px -5px 13px 0px rgba(50, 50, 50, 0.37);
+	box-shadow:         0px -5px 13px 0px rgba(50, 50, 50, 0.37);
+}
+#caratteristiche div{
+	margin-top: 100px;
+}
+#caratteristiche p {
+    font-family: "Oswald",sans-serif;
+    width: 20%;
+    margin-left: 40%;
+    position: relative;
+    top: 10px;
+    letter-spacing: 2px;
+    padding: 10px;
+    background: #f6f6f6;
+    color: #333;
+}
+#lista_ingredienti{
+	width: 45%;
+	float: left;
+	text-align: left;
+	margin-left: 10%;
+	margin-top: 10%;
+	position: relative;
+	top: 30px;
+	padding-left: 10px;
+	border-left: 3px solid tomato;
+}
+#lista_ingredienti li{
+	font-size: 1.5em;
+    font-family: "Owsald",sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    cursor: default;
+}
+#lista_ingredienti li:last-child{
+	padding-bottom: 0;
+}
+#grafico{
+    border-style: solid;
+    border-width: 12px 22px 8px 15px;
+    -webkit-border-image: url(img/arrow.png) 26 309 28 44 stretch;
+    -o-border-image: url(img/arrow.png) 26 309 28 44 stretch;
+    border-image: url(img/arrow.png) 29 49 26 44 stretch;
+    float: right;
+    width: 40%;
+    clear: both;
+    margin-right: 40px;
+    position: relative;
+    bottom: 200px;
+}
+/* Creazione */
+#creazione{
+	display: none;
+	overflow: auto;
+	width: 80%;
+	margin: auto;
+}
+#creazione .titolo {
+    position: fixed;
+    width: 80%;
+    background: #fff;
+    z-index: 9;
+    padding-bottom: 40px;
+}
+#content_pizza_vuota {
+    width: 40%;
+    float: left;
+    position: fixed;
+    height: 100%;
+    color: #f6f6f6;
+    background: #333;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+#content_pizza_vuota img {
+    position: absolute;
+    top: 30%;
+}
+#content_pizza_vuota p{
+    float: none;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    font-weight: 900;
+    font-size: 1.3em;
+    margin-top: 20px;
+    text-align: left;
+    top: 70%;
+}
+#content_lista_elementi {
+    width: 50%;
+    float: right;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 168px;
+    background: #eee;
+}
+h3.categoria {
+    padding: 20px;
+    background: tomato;
+    border-bottom: 1px solid #f6f6f6;
+    font-family: "Raleway", sans-serif;
+    font-size:1.5em;
+    text-transform: uppercase;
+    color: #fff;
+}
+article.toppings:nth-child(2n) {
+    background: #f6f6f6;
+}
+ol#lista_ingredienti_usati{
+    list-style-type: decimal;
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: left;
+    position: relative;
+    top: 70%;
+}
+.lista_elementi{
+	display: none;
+}
+input[type=checkbox] {
+    display:none;
+}
+
+input[type=checkbox] + label {
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    display:block;
+    padding: 0;
+}
+input[type=checkbox]:checked + label {
+    border:2px solid red;
+    box-sizing: border-box;
+    display:block;
+    padding: 0;
+}
+.nome_ingrediente {
+	float: right;
+	position: relative;
+	bottom: 75px;
+	right: 70%;
+	width: 0;
+}
+/* About.html */
+#content_about{
+	overflow: auto;
+	text-align: center;
+}
+.par_about{
+	font-family: "Raleway", sans-serif;
+	font-size: 1.1em;
+	width: 60%;
+	margin:auto;
+	float:initial;
+	padding: 10px 0;
+	line-height: 20px;
+	text-align: left;
+}
+.titolo_about{
+	font-family: "oswald",sans-serif;
+	width: 60%;
+	font-size: 1.5em;
+	font-weight: 900;
+	margin: auto;
+	text-align: left;
+
+}
+.par_about a{
+	color: tomato;
+}
+#cinegraph {
+	width: 450px;
+    margin: 60px;
+    border: 7px solid tomato;
+    border-radius: 30px;
+}
+/* Footer */
+footer{
+	overflow: auto;
+    margin-top: 20px;
+    height: 30px;
+    background: #333;
+    color: #f6f6f6;
+    padding: 15px;
+}
+footer p{
+	top: 0;
+	font-family: "Raleway", sans-serif;
+	font-size: 1.3em;
+}
+footer span{
+	color: tomato;
+	font-family: "Raleway", sans-serif;
+	font-weight: 900;
+	letter-spacing: 1px;
+	font-size: 1.5em;
+}
+/* Mobile */
+/*mobile classe pre-impostate*/
+@media screen and (max-width: 500px) {
+	.frase{
+		font-size:1em;
+	}
+	.evidence{
+		font-size: 5.5em;
+	}
+	.vai{
+		width: 25%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.frase{
+		font-size:0.7em;
+	}
+	.evidence{
+		font-size: 5em;
+	}
+}
+/*Mobile index 2-6 section */
+/*mobile index seconda section*/
+@media screen and (max-width: 700px) {
+	.preview{
+		padding: 28px 0px;
+	}
+}
+/*mobile index terza section*/
+@media screen and (max-width: 700px) {
+	#back_pizza2 div{
+		width: 100%;
+		font-size: 13px;
+	}
+	#testo_storia{
+		width: 100%;
+	}
+}
+/*mobile index quarta section*/
+@media screen and (max-width: 1024px) {
+	.paragrafo{
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 980px) {
+	#testo_storia{
+		width: 80%;
+	}
+}
+@media screen and (max-width: 500px) {
+	#wrapper_storia{
+		background: none;
+	}
+	#testo_storia p{
+		width: 200%;
+		font-size: 0.8em;
+	}
+	#back_pizza img {
+    	width: 250px;
+	}
+}
+/*mobile index quinta section*/
+@media screen and (max-width: 980px) {
+    #half1 {
+	    background-attachment: initial;
+	    background-size: cover;
+	    height: initial;
+	    overflow: auto;
+    }
+    #content_draggable{
+    	width: 270px;
+    	height: 340px;
+    }
+}
+/* mobile index sesta section */
+@media screen and (max-width: 700px) {
+	#wrapper_about{
+		overflow: initial;
+	}
+}
+/*Mobile Storia.html*/
+@media screen and (max-width: 700px) {
+	.spiegazione p{
+		width: 100%;
+		float: initial;
+		box-sizing: border-box;
+	}
+	div#content_legna{
+		width: 100%;
+	}
+	div#content_elettrico{
+		width: 100%;
+	}
+	.spiegazione img{
+		float: right;
+	}
+	#legislazione p {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+}
+/*Mobile Filtro*/
+@media screen and (max-width: 1024px) {
+	#informazioni{
+		width: 34.4%;
+		left: 160px;
+	}
+	#content_pizza{
+		width: 45%;
+	}
+	article.pizza{
+		width: 45%;
+	}
+}
+@media screen and (max-width: 980px) {
+    #draggable {
+        width: 40px;
+        height: 40px;
+    }
+    #content_draggable{
+    	width: 270px;
+    	height: 340px;
+    }
+    #messaggio{
+    	top:0;
+    	left: 10px;
+    	margin-right: 50px;
+    }
+    #informazioni{
+		width: 48.2%;
+		left: 0px;
+	}
+	#content_pizza{
+		width: 60%;
+	}
+	article.pizza{
+		width: 29%;
+	}
+}
+@media screen and (max-width: 700px) {
+	#informazioni{
+		width: 45.4%;
+	}
+	#content_pizza{
+		width: 60%;
+	}
+	article.pizza{
+    	width: 44.6%;
+    }
+    #mostraTutte{
+    	left: 0;
+    	top:85%;
+    }
+}
+@media screen and (max-width: 500px) {
+	#informazioni{
+		width: 73%;
+		top: 61.5%;
+		float: initial;
+		margin-left: 0;
+		z-index: 2;
+	}
+	#content_pizza{
+		width: 100%;
+		position: relative;
+		top: 420px;
+		float: initial;
+		z-index: 0;
+	}
+	article.pizza{
+    	width: 91%;
+    	z-index: 1;
+    }
+    #filtro{
+    	width: 100%;
+    	height: 60%;
+		z-index: 2;
+		background: #fff;
+    }
+        #mostraTutte{
+    	left: 60%;
+    	top:0;
+    }
+}
+/*mobile info*/
+@media screen and (max-width: 500px) {
+	#caratteristiche p{
+		width: 92%;
+		margin-left: 0px;
+	}
+	#lista_ingredienti{
+		float: initial;
+		width: 80%;
+	}
+	#lista_ingredienti li{
+		font-size: 1em;
+	}
+	#grafico{
+		width: 80%;
+		float: initial;
+		position: relative;
+		top: 100px;
+		margin: 0;
+	}
+	#img_pizza {
+	    width: 80%;
+	    padding: 0;
+	    padding-top: 60px;
+	    padding-bottom: 60px;
+	}
+}
+/*mobile creazione*/
+@media screen and (max-width: 980px) {
+	#content_pizza_vuota p{
+		top: 78%;
+	}
+	ol#lista_ingredienti_usati{
+		top: 78%;
+	}
+}
+@media screen and (max-width: 700px) {
+	#content_lista_elementi{
+		padding-top: 216px;
+	}
+	#content_pizza_vuota img{
+		position: absolute;
+		top: 37%;
+		width: 90%;
+	}
+	.nome_ingrediente{
+		right: 52%;
+	}
+}
+@media screen and (max-width: 500px) {
+	#content_pizza_vuota img{
+		top: 27%;
+	}
+	ol#lista_ingredienti_usati{
+		top: 56%;
+	}
+	#creazione {
+    	width: 83%;
+	}
+	#creazione .titolo{
+		font-size: 1em;
+	}
+	#content_pizza_vuota{
+		width: 40%;
+	}
+	#content_lista_elementi{
+		width: 43%;
+	}
+	#content_pizza_vuota img{
+		width: 90%;
+    	padding-top: 15px;
+	}
+	#content_pizza_vuota {
+    	width: 30%;
+	}
+	#content_pizza_vuota img {
+    	width: 100%;
+    	right: -1px;
+	}
+	#content_lista_elementi {
+    	width: 64%;
+    	padding-top: 136px;
+	}
+	section.elementi_creazione h3 {
+    	font-size: 1em;
+	}
+	h3.nome_ingrediente {
+    	position: relative;
+    	right: 120px;
+	}
+	#indietro{
+		width: 40px;
+		height: 40px;
+		font-size: 1em;
+	}
+	#content_pizza_vuota p{
+		top: 56%;
+    	right: 9px;
+	}
+
+}
+/* Mobile about */
+@media screen and (max-width: 700px) {
+	.par_about{
+		font-size: 0.9em;
+	}
+}
+@media screen and (max-width: 500px) {
+	.par_about{
+		font-size: 0.9em;
+		width: 90%;
+	}
+	.titolo_about{
+		width: 90%;
+	}
+	.text3 img {
+    	width: 55px;
+	}
+	#cinegraph{
+		width: 240px;
+		margin: 0px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+/* Mobile footer */
+@media screen and (max-width: 700px) {
+	footer{
+		width: 90%;
+	}
+	footer p{
+		font-size: 0.6em;
+	}
+}

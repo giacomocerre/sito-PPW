@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Pizze Regionali</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="font.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/oggetti.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<header>
+		<a href="index.html"><img id="logoHead" src="img/logoHead.png" alt="logo"></a>
+		<input type="checkbox" id="op">
+		<div class="lower">
+			<img id="ham" src="img/hamburger.png" alt="menu">
+	  		<label for="op">- - -</label>
+		</div>
+		<div class="coperto fullscreen">
+			<label for="op"></label>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="storia.html">Storia</a></li>
+					<li><a href="pizze.html">Pizze</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="content">
+		<div id="filtro">
+			<input id="mostraTutte" type="button" name="tutte le pizze" value="tutte le pizze">	
+			<div id="content_draggable">
+				<div id="draggable" class="drag">
+					<div id="messaggio">
+						<div class="arrow-left"></div>
+						<p>Spostami sulla mappa!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="informazioni">
+			<p class="valore">Regione: <span id="regione" class="risultato">-</span></p>
+			<input id="crea" type="button" name="crea" value="Crea">
+		</div>
+		<div id="content_pizza">
+			<h2 id="messaggio_mare">NON CI SONO PIZZE IN MARE</h2>
+		</div>
+	</div>
+	<input id="indietro" type="button" name="indietro" value="<">
+	<div id="info" class="standard">
+		<h1 id="nome_pizza">.</h1>
+		<img id="img_pizza" src="#" alt="pizza">
+		<div id="caratteristiche">
+			<h3>Caratteristiche &amp; Ingredienti</h3>
+			<p>Regione:<span id="info_regione">.</span></p>
+			<div>
+				<ul id="lista_ingredienti"></ul>
+				<canvas id="grafico" width="400" height="230"></canvas>
+			</div>
+		</div>
+	</div>
+	<div id="creazione">
+		<h2 class="titolo">Crea la tua pizza! Scegli tra questi ingredienti</h2>
+		<div id="content_pizza_vuota">
+			<img src="img/ingredienti/base.png" alt="pizza vuota">
+			<p>Ingredienti:</p>
+			<ol id="lista_ingredienti_usati">
+			</ol>
+		</div>
+		<div id="content_lista_elementi">
+			<section id="content_base" class="elementi_creazione">
+				<h3 class="categoria">Basi</h3>
+				<div id="base"></div>
+			</section>
+			<section id="content_formaggio" class="elementi_creazione">
+				<h3 class="apri categoria">Formaggi</h3>
+				<div id="formaggio" class="lista_elementi"></div>
+			</section>
+			<section id="content_verdura" class="elementi_creazione">
+				<h3 class="apri categoria">Verdure</h3>
+				<div id="verdura" class="lista_elementi"></div>
+			</section>
+			<section id="content_carne" class="elementi_creazione">
+				<h3 class="apri categoria">Carne</h3>
+				<div id="carne" class="lista_elementi"></div>
+			</section>
+			<section id="content_carnemare" class="elementi_creazione">
+				<h3 class="apri categoria">Mare</h3>
+				<div id="mare" class="lista_elementi"></div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
